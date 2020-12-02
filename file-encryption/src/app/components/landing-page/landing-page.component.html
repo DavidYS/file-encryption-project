@@ -1,0 +1,93 @@
+<div class="wrap-login100">
+  <div class="login100-pic js-tilt text-center" data-tilt>
+    <img alt="IMG" src="../assets/images/logo.png" style="height: 35vh; width: 22vw;">
+  </div>
+
+  <!--  Login-->
+  <form *ngIf="isLogin; else register" class="login100-form validate-form">
+					<span class="login100-form-title">
+						Private encryption
+					</span>
+
+    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+      <input class="input100" name="email" placeholder="Email" type="text">
+      <span class="focus-input100"></span>
+      <span class="symbol-input100">
+							<i aria-hidden="true" class="fa fa-envelope"></i>
+						</span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Password is required">
+      <input class="input100" name="pass" placeholder="Password" type="password">
+      <span class="focus-input100"></span>
+      <span class="symbol-input100">
+							<i aria-hidden="true" class="fa fa-lock"></i>
+						</span>
+    </div>
+
+    <div class="container-login100-form-btn">
+      <button class="login100-form-btn">
+        Login
+      </button>
+    </div>
+
+<!--    <div class="text-center p-t-12">-->
+<!--						<span class="txt1">-->
+<!--							Forgot-->
+<!--						</span>-->
+<!--      <a class="txt2" href="#">-->
+<!--        Username / Password?-->
+<!--      </a>-->
+<!--    </div>-->
+
+    <div class="text-center">
+      <a (click)="togglePage()" class="txt2">
+        Create your Account
+      </a>
+    </div>
+  </form>
+
+  <!--  Register-->
+  <ng-template #register>
+    <form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Create an account
+					</span>
+
+      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" name="email" placeholder="Email" type="text">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+							<i aria-hidden="true" class="fa fa-envelope"></i>
+						</span>
+      </div>
+
+      <div class="wrap-input100 validate-input" data-validate="Password is required">
+        <input class="input100" name="pass" placeholder="Password" type="password">
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+							<i aria-hidden="true" class="fa fa-lock"></i>
+						</span>
+      </div>
+
+      <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+          Register
+        </button>
+      </div>
+      <div class="text-center">
+        <a (click)="togglePage()" class="txt2">
+          Already have an account?
+        </a>
+      </div>
+    </form>
+  </ng-template>
+
+
+  <div class="container-login100-form-btn">
+    <button [routerLink]="['upload']" class="login100-form-btn">
+      Continue as visitor
+    </button>
+  </div>
+</div>
+
