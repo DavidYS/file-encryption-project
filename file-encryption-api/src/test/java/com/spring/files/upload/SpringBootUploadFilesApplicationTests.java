@@ -1,4 +1,4 @@
-package com.bezkoder.spring.files.upload;
+package com.spring.files.upload;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.bezkoder.spring.files.upload.service;
+package com.spring.files.upload.service;
 
 import java.nio.file.Path;
 import java.util.stream.Stream;

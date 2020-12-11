@@ -1,9 +1,12 @@
-package com.bezkoder.spring.files.upload.controller;
+package com.spring.files.upload.controller;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.spring.files.upload.message.ResponseMessage;
+import com.spring.files.upload.model.FileInfo;
+import com.spring.files.upload.service.FilesStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -17,10 +20,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
-
-import com.bezkoder.spring.files.upload.message.ResponseMessage;
-import com.bezkoder.spring.files.upload.model.FileInfo;
-import com.bezkoder.spring.files.upload.service.FilesStorageService;
 
 @Controller
 @CrossOrigin("http://localhost:8081")

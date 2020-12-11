@@ -1,12 +1,11 @@
-package com.bezkoder.spring.files.upload;
+package com.spring.files.upload;
 
 import javax.annotation.Resource;
 
+import com.spring.files.upload.service.FilesStorageService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.bezkoder.spring.files.upload.service.FilesStorageService;
 
 @SpringBootApplication
 public class SpringBootUploadFilesApplication implements CommandLineRunner {
