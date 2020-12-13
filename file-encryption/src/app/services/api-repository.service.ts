@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpHeaders, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { UserCredentials } from '../models/userCredentials';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UploadFileService {
+export class ApiRepository {
 
   private baseUrl = 'http://localhost:8080';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   upload(file: File): Observable<HttpEvent<any>> {
     const formData: FormData = new FormData();
@@ -21,10 +22,19 @@ export class UploadFileService {
       responseType: 'json'
     });
 
-    return this.http.request(req);
+    return this.httpClient.request(req);
   }
 
   getFiles(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/files`);
+    return this.httpClient.get(`${this.baseUrl}/files`);
   }
+
+  signUp = (userCredentials: UserCredentials) =>
+    this.httpClient.post(this.baseUrl + '/sign-up', userCredentials);
+
+  login = (userCredentials: UserCredentials) =>
+    this.httpClient.post(this.baseUrl + '/login', userCredentials);
+
+  getUsers = () =>
+    this.httpClient.get(this.baseUrl + '/users');
 }

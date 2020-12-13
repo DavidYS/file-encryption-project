@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { UploadFileService } from 'src/app/services/upload-file.service';
+import { ApiRepository } from 'src/app/services/api-repository.service';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
+import { OnDestroy } from "@angular/core";
 
 @Component({
   selector: 'app-upload-files',
   templateUrl: './upload-files.component.html',
   styleUrls: ['./upload-files.component.css']
 })
-export class UploadFilesComponent implements OnInit {
+export class UploadFilesComponent implements OnInit, OnDestroy {
 
   selectedFiles: FileList;
   currentFile: File;
@@ -19,7 +20,7 @@ export class UploadFilesComponent implements OnInit {
   fileInfos: Observable<any>;
 
   constructor(
-    private uploadService: UploadFileService,
+    private uploadService: ApiRepository,
     private location: Location) { }
 
   ngOnInit() {
@@ -50,5 +51,9 @@ export class UploadFilesComponent implements OnInit {
       });
 
     this.selectedFiles = undefined;
+  }
+
+  ngOnDestroy(): void {
+    sessionStorage.removeItem('private');
   }
 }
