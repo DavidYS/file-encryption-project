@@ -29,6 +29,10 @@ export class LandingPageComponent implements OnInit {
 
   togglePage() {
     this.isLogin = !this.isLogin;
+    this.invalidCredentials = false;
+    this.errorType = null;
+    this.userCredentials.password = null;
+    this.userCredentials.email = null;
   }
 
   signUp() {

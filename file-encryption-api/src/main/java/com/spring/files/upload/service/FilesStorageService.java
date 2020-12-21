@@ -1,19 +1,22 @@
 package com.spring.files.upload.service;
 
-import java.nio.file.Path;
-import java.util.stream.Stream;
-
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
 public interface FilesStorageService {
-  public void init();
+  void init();
 
-  public void save(MultipartFile file);
+  void save(MultipartFile file);
 
-  public Resource load(String filename);
+  Resource load(String filename);
 
-  public void deleteAll();
+  void deleteAll();
 
-  public Stream<Path> loadAll();
+  void deleteFile(String filename) throws IOException;
+
+  Stream<Path> loadAll();
 }

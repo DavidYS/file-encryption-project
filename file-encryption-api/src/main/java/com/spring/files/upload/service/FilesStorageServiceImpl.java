@@ -1,5 +1,6 @@
 package com.spring.files.upload.service;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
@@ -55,6 +56,11 @@ public class FilesStorageServiceImpl implements FilesStorageService {
   @Override
   public void deleteAll() {
     FileSystemUtils.deleteRecursively(root.toFile());
+  }
+
+  @Override
+  public void deleteFile(String filename) throws IOException {
+    Files.delete(Paths.get(root + "\\" + filename));
   }
 
   @Override

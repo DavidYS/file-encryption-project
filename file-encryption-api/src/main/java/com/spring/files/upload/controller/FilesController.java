@@ -1,7 +1,7 @@
 package com.spring.files.upload.controller;
 
-import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import com.spring.files.upload.message.ResponseMessage;
@@ -9,6 +9,7 @@ import com.spring.files.upload.model.FileInfo;
 import com.spring.files.upload.model.UserCredentials;
 import com.spring.files.upload.service.FilesStorageService;
 import com.spring.files.upload.service.UserService;
+import com.spring.files.upload.service.helpers.FileHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -34,6 +35,8 @@ public class FilesController {
     @Autowired
     private UserService userService;
 
+    private FileHelper fileHelper = new FileHelper();
+
     @GetMapping("/users")
     public ResponseEntity<List<UserCredentials>> getUsers() {
         return ResponseEntity.ok().body(this.userService.getUsers());
@@ -51,12 +54,16 @@ public class FilesController {
 
     @PostMapping("/upload")
     public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file) {
+
         String message = "";
         try {
-            storageService.save(file);
-
-            String fileContent = new String(file.getBytes(), StandardCharsets.UTF_8);
-
+            if (Objects.requireNonNull(file.getOriginalFilename()).contains(".doc")) {
+                this.storageService.save(file);
+                fileHelper.encryptDocxFile(file.getOriginalFilename());
+                this.storageService.deleteFile(file.getOriginalFilename());
+            } else {
+                fileHelper.encryptTextFile(file);
+            }
             message = "Uploaded the file successfully: " + file.getOriginalFilename();
             return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
         } catch (Exception e) {
