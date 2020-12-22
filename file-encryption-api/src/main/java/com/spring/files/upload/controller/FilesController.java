@@ -1,9 +1,5 @@
 package com.spring.files.upload.controller;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
-
 import com.spring.files.upload.message.ResponseMessage;
 import com.spring.files.upload.model.FileInfo;
 import com.spring.files.upload.model.UserCredentials;
@@ -24,6 +20,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
+
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Controller
 @CrossOrigin
@@ -53,21 +53,23 @@ public class FilesController {
     }
 
     @PostMapping("/upload")
-    public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file, boolean encrypt) {
 
         String message = "";
         try {
-            if (Objects.requireNonNull(file.getOriginalFilename()).contains(".doc")) {
+            if (Objects.requireNonNull(file.getOriginalFilename()).contains(".txt")) {
+                fileHelper.handleTextFiles(file, encrypt);
+            } else if (Objects.requireNonNull(file.getOriginalFilename()).contains(".doc")) {
                 this.storageService.save(file);
-                fileHelper.encryptDocxFile(file.getOriginalFilename());
+                fileHelper.handleDocxFiles(file.getOriginalFilename(), encrypt);
                 this.storageService.deleteFile(file.getOriginalFilename());
             } else {
-                fileHelper.encryptTextFile(file);
+                fileHelper.handlePdfFiles(file.getOriginalFilename(), encrypt);
             }
-            message = "Uploaded the file successfully: " + file.getOriginalFilename();
+            message = "Processed the file successfully: " + file.getOriginalFilename();
             return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
         } catch (Exception e) {
-            message = "Could not upload the file: " + file.getOriginalFilename() + "!";
+            message = "Could not process the file: " + file.getOriginalFilename() + "!";
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
         }
     }

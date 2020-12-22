@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bezkoder.iml" filepath="$PROJECT_DIR$/.idea/bezkoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file-encryption-api/spring-boot-upload-files.iml" filepath="$PROJECT_DIR$/file-encryption-api/spring-boot-upload-files.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-encryption-api/spring-boot-upload-files (1).iml" filepath="$PROJECT_DIR$/file-encryption-api/spring-boot-upload-files (1).iml" />
     </modules>
   </component>

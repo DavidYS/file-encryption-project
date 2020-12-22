@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-upload-files (1)" />
+        <module name="spring-boot-upload-files" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

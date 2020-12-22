@@ -3,14 +3,33 @@
   <component name="ChangeListManager">
     <list default="true" id="877c7f0c-ecad-4819-b3b0-e5ea67888108" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04f1bc740c9665f7e219d618fc0b21b4d9cc0d1d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07457ddd298ca903a418fbe0bb4c6b48858db8ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1dc535d880b66cd857bc3a5b63fff26687d6c1da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22fa1bdeef15c65cd4b3f0c527ccc208d51ffbb5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24d611a32539726168930e3076ca96a3e3298f56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a072e179e2c1a2d3400226527511f3d336e8999" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e4b1493decffb5345a0b9521b6d32edaa1d7f85" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32b046442a868bda312757350c80628c3cf33d19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/370496c287aad691087ca5f966173a5642f1a532" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3bdc07d46689475b8faef84ef1428ce99eaac369" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/44101c32aab9aca25cbc92bee38282736eaa1d73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/477a57454427125f136d4c4c160ec8eac17cb428" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d9df4826e898bb69dddca7a91541414fd345627" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5fd64d920f4c3c27376aaa02d73e5464a38f08c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6eb218cec4aa9a0f1b8eb3c1ee0e37d2a5f075e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/adc6a4d03792b346c27f7c5607ead33ec322d28d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b42f0d346faf40bc47b6b3ccc3dad20df88de44c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-8-upload-file" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-upload-multipart-files" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/FilesStorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/FilesStorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +90,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBootUploadFilesApplication (1)">
+  <component name="RunManager" selected="Spring Boot.SpringBootUploadFilesApplication (2)">
     <configuration name="SpringBootUploadFilesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="spring-boot-upload-files (1)" />
       <extension name="coverage">
@@ -81,6 +100,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bezkoder.spring.files.upload.SpringBootUploadFilesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootUploadFilesApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-upload-files" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.spring.files.upload.SpringBootUploadFilesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,6 +141,7 @@
       <workItem from="1606401258008" duration="4855000" />
       <workItem from="1606583657427" duration="1256000" />
       <workItem from="1606892406205" duration="1081000" />
+      <workItem from="1608627985047" duration="4025000" />
     </task>
     <servers />
   </component>
@@ -141,6 +168,21 @@
           <url>file://$PROJECT_DIR$/spring-boot-upload-multipart-files/src/main/java/com/bezkoder/spring/files/upload/controller/FilesController.java</url>
           <line>34</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -31,11 +31,11 @@ export class UploadFilesComponent implements OnInit, OnDestroy {
     this.selectedFiles = event.target.files;
   }
 
-  upload() {
+  upload(encrypt: boolean) {
     this.progress = 0;
 
     this.currentFile = this.selectedFiles.item(0);
-    this.uploadService.upload(this.currentFile).subscribe(
+    this.uploadService.upload(this.currentFile, encrypt).subscribe(
       event => {
         if (event.type === HttpEventType.UploadProgress) {
           this.progress = Math.round(100 * event.loaded / event.total);

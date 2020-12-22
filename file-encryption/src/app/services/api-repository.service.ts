@@ -12,10 +12,11 @@ export class ApiRepository {
 
   constructor(private httpClient: HttpClient) { }
 
-  upload(file: File): Observable<HttpEvent<any>> {
+  upload(file: File, encrypt: boolean): Observable<HttpEvent<any>> {
     const formData: FormData = new FormData();
 
     formData.append('file', file);
+    formData.append('encrypt', JSON.stringify(encrypt));
 
     const req = new HttpRequest('POST', `${this.baseUrl}/upload`, formData, {
       reportProgress: true,

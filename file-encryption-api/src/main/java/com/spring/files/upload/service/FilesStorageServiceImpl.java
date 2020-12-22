@@ -19,6 +19,10 @@ public class FilesStorageServiceImpl implements FilesStorageService {
 
   private final Path root = Paths.get("uploads");
 
+  public Path getRoot() {
+    return root;
+  }
+
   @Override
   public void init() {
     try {

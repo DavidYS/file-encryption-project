@@ -29,10 +29,10 @@
         </label>
       </div>
       <div class="col-4">
-        <button (click)="upload()" [disabled]="!selectedFiles" class="btn btn-success mr-2">
+        <button (click)="upload(true)" [disabled]="!selectedFiles" class="btn btn-success mr-2">
           Encrypt
         </button>
-        <button (click)="upload()" [disabled]="!selectedFiles" class="btn btn-info">
+        <button (click)="upload(false)" [disabled]="!selectedFiles" class="btn btn-info">
           Decrypt
         </button>
       </div>
