@@ -1,32 +1,26 @@
 package com.spring.files.upload.service.helpers;
 
-import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
 
 public class CipherHelper {
 
-    private static byte[] keyBytes;
-    private static String secretKey = "boooooooooom!!!!boooooooooom!!!!boooooooooom!!!!boooooooooom!!!!";
-    private static String salt = "ssshhhhhhhhhhh!!!!";
+    private final String SECRET_KEY = "fytSNnTVVg2jESgP6pFoRJxLkp1V2jzogPlGBd51cXHIZnYPwz9UZuCCJzIn2VZU1dbQp95tW1rgOyfcdUvtY6pe0uGmShFbopF6AsyCNS1DAuXTb1B8ZXRGCEEM6dmB";
+    private final String SALT = "dfx4J5ei3OVzn0OM4w";
     private static byte[] iv = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-    public String encrypt(String strToEncrypt) {
+    public String encrypt(String strToEncrypt, String secretKeyOfUser) {
         try {
             IvParameterSpec ivspec = new IvParameterSpec(iv);
 
             SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-            KeySpec spec = new PBEKeySpec(secretKey.toCharArray(), salt.getBytes(), 65536, 256);
+            KeySpec spec = createKeySpec(secretKeyOfUser);
             SecretKey tmp = factory.generateSecret(spec);
             SecretKeySpec secretKey = new SecretKeySpec(tmp.getEncoded(), "AES");
 
@@ -39,12 +33,12 @@ public class CipherHelper {
         return null;
     }
 
-    public String decrypt(String strToDecrypt) {
+    public String decrypt(String strToDecrypt, String secretKeyOfUser) {
         try {
             IvParameterSpec ivspec = new IvParameterSpec(iv);
 
             SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-            KeySpec spec = new PBEKeySpec(secretKey.toCharArray(), salt.getBytes(), 65536, 256);
+            KeySpec spec = createKeySpec(secretKeyOfUser);
             SecretKey tmp = factory.generateSecret(spec);
             SecretKeySpec secretKey = new SecretKeySpec(tmp.getEncoded(), "AES");
 
@@ -57,24 +51,8 @@ public class CipherHelper {
         return null;
     }
 
-    public byte[] encryptBytes(byte[] message)
-            throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException,
-            BadPaddingException, IllegalBlockSizeException {
-
-        Cipher cipher = Cipher.getInstance("AES");
-        SecretKey secretKey = new SecretKeySpec(keyBytes, "AES");
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-        return cipher.doFinal(message);
+    private KeySpec createKeySpec(String secretKeyOfUser) {
+        return secretKeyOfUser != null ? new PBEKeySpec(secretKeyOfUser.toCharArray(), SALT.getBytes(), 65536, 256) :
+                new PBEKeySpec(SECRET_KEY.toCharArray(), SALT.getBytes(), 65536, 256);
     }
-
-    public byte[] decryptBytes(byte[] encryptedMessage)
-            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException,
-            BadPaddingException, IllegalBlockSizeException {
-
-        Cipher cipher = Cipher.getInstance("AES");
-        SecretKey secretKey = new SecretKeySpec(keyBytes, "AES");
-        cipher.init(Cipher.DECRYPT_MODE, secretKey);
-        return cipher.doFinal(encryptedMessage);
-    }
-
 }

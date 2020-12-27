@@ -43,8 +43,8 @@ public class FilesController {
     }
 
     @PostMapping("/sign-up")
-    public ResponseEntity<UserCredentials> signUp(@RequestBody UserCredentials userCredentials) {
-        return ResponseEntity.ok().body(this.userService.signUp(userCredentials));
+    public ResponseEntity<?> signUp(@RequestBody UserCredentials userCredentials) {
+        return this.userService.signUp(userCredentials);
     }
 
     @PostMapping("/login")
@@ -53,18 +53,18 @@ public class FilesController {
     }
 
     @PostMapping("/upload")
-    public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file, boolean encrypt) {
+    public ResponseEntity<ResponseMessage> uploadFile(@RequestParam("file") MultipartFile file, boolean encrypt, String email) {
 
         String message = "";
         try {
             if (Objects.requireNonNull(file.getOriginalFilename()).contains(".txt")) {
-                fileHelper.handleTextFiles(file, encrypt);
+                fileHelper.handleTextFiles(file, encrypt, userService.getPrivateSecretKey(email));
             } else if (Objects.requireNonNull(file.getOriginalFilename()).contains(".doc")) {
                 this.storageService.save(file);
-                fileHelper.handleDocxFiles(file.getOriginalFilename(), encrypt);
+                fileHelper.handleDocxFiles(file.getOriginalFilename(), encrypt, userService.getPrivateSecretKey(email));
                 this.storageService.deleteFile(file.getOriginalFilename());
             } else {
-                fileHelper.handlePdfFiles(file.getOriginalFilename(), encrypt);
+                fileHelper.handlePdfFiles(file.getOriginalFilename(), encrypt, userService.getPrivateSecretKey(email));
             }
             message = "Processed the file successfully: " + file.getOriginalFilename();
             return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));

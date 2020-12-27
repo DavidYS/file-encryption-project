@@ -17,6 +17,7 @@ export class ApiRepository {
 
     formData.append('file', file);
     formData.append('encrypt', JSON.stringify(encrypt));
+    formData.append('email', sessionStorage.getItem('private'));
 
     const req = new HttpRequest('POST', `${this.baseUrl}/upload`, formData, {
       reportProgress: true,

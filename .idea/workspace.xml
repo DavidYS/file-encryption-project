@@ -2,33 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877c7f0c-ecad-4819-b3b0-e5ea67888108" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04f1bc740c9665f7e219d618fc0b21b4d9cc0d1d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07457ddd298ca903a418fbe0bb4c6b48858db8ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1dc535d880b66cd857bc3a5b63fff26687d6c1da" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22fa1bdeef15c65cd4b3f0c527ccc208d51ffbb5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24d611a32539726168930e3076ca96a3e3298f56" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a072e179e2c1a2d3400226527511f3d336e8999" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e4b1493decffb5345a0b9521b6d32edaa1d7f85" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32b046442a868bda312757350c80628c3cf33d19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/370496c287aad691087ca5f966173a5642f1a532" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3bdc07d46689475b8faef84ef1428ce99eaac369" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/44101c32aab9aca25cbc92bee38282736eaa1d73" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/477a57454427125f136d4c4c160ec8eac17cb428" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d9df4826e898bb69dddca7a91541414fd345627" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5fd64d920f4c3c27376aaa02d73e5464a38f08c6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6eb218cec4aa9a0f1b8eb3c1ee0e37d2a5f075e6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/adc6a4d03792b346c27f7c5607ead33ec322d28d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b42f0d346faf40bc47b6b3ccc3dad20df88de44c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/FilesStorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/FilesStorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/model/UserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/model/UserCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/model/UserCredentialsDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/CipherHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/CipherHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/landing-page/landing-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/landing-page/landing-page.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +51,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
-    <property name="ts.external.directory.path" value="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\bezkoder\angular-8-upload-file\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\file-encryption-project\file-encryption\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -141,7 +123,7 @@
       <workItem from="1606401258008" duration="4855000" />
       <workItem from="1606583657427" duration="1256000" />
       <workItem from="1606892406205" duration="1081000" />
-      <workItem from="1608627985047" duration="4025000" />
+      <workItem from="1608627985047" duration="9887000" />
     </task>
     <servers />
   </component>
@@ -171,7 +153,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
-          <line>53</line>
+          <line>51</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -181,7 +163,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
-          <line>131</line>
+          <line>129</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>

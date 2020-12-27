@@ -18,4 +18,7 @@ public class UserCredentials {
 
     @Column(name="password")
     private String password;
+
+    @Column(name="secretKey")
+    private String secretKey;
 }

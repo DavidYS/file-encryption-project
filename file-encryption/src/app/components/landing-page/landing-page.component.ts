@@ -38,7 +38,14 @@ export class LandingPageComponent implements OnInit {
   signUp() {
     this.subscription.add(this.apiRepository.signUp(this.userCredentials).subscribe(
       (response) => {
-        this.errorType = 'success';
+        if (response) {
+          this.errorType = 'success';
+        } else {
+          this.errorType = 'danger';
+        }
+      },
+      (error) => {
+        this.errorType = 'warning';
       }
     ));
   }
@@ -47,7 +54,7 @@ export class LandingPageComponent implements OnInit {
     this.subscription.add(this.apiRepository.login(this.userCredentials).subscribe(
       (response) => {
         if (response) {
-          sessionStorage.setItem('private', JSON.stringify(response));
+          sessionStorage.setItem('private', JSON.stringify(this.userCredentials.email));
           this.router.navigate(['/upload']);
         } else {
           this.invalidCredentials = true;
