@@ -31,12 +31,13 @@ export class ApiRepository {
     return this.httpClient.get(`${this.baseUrl}/files`);
   }
 
+  deleteFile = (filePath): Observable<any> =>  this.httpClient.delete(`${filePath}`);
+
+  deleteFiles = () => this.httpClient.delete(this.baseUrl + '/files');
+
   signUp = (userCredentials: UserCredentials) =>
     this.httpClient.post(this.baseUrl + '/sign-up', userCredentials);
 
   login = (userCredentials: UserCredentials) =>
     this.httpClient.post(this.baseUrl + '/login', userCredentials);
-
-  getUsers = () =>
-    this.httpClient.get(this.baseUrl + '/users');
 }

@@ -2,16 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877c7f0c-ecad-4819-b3b0-e5ea67888108" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/css/asPieProgress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/css/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/css/images/background2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/css/images/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/iconic/css/material-design-iconic-font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/iconic/css/material-design-iconic-font.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/loading-bar/loading-bar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/loading-bar/loading-bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/animsition/css/animsition.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/animsition/css/animsition.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/animsition/js/animsition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/animsition/js/animsition.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/countdowntime/countdowntime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/daterangepicker/daterangepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/daterangepicker/daterangepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/daterangepicker/moment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/daterangepicker/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-encryption/src/assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/model/UserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/model/UserCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/model/UserCredentialsDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/CipherHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/CipherHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/landing-page/landing-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/landing-page/landing-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/landing-page/landing-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/landing-page/landing-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/assets/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/assets/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/assets/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +75,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/file-encryption/src/assets/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,9 +89,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\file-encryption-project\file-encryption\src\assets\css" />
+      <recent name="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\file-encryption-project\file-encryption\src\app\components\upload-files" />
+      <recent name="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\file-encryption-project\file-encryption\src\assets" />
       <recent name="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\bezkoder\angular-8-upload-file\src" />
       <recent name="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\bezkoder\angular-8-upload-file\src\app" />
-      <recent name="C:\Users\david.ghiurau\Downloads\Facultate\Anul 4\TSD\bezkoder\angular-8-upload-file\src\app\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -124,6 +160,8 @@
       <workItem from="1606583657427" duration="1256000" />
       <workItem from="1606892406205" duration="1081000" />
       <workItem from="1608627985047" duration="9887000" />
+      <workItem from="1609857272384" duration="507000" />
+      <workItem from="1609858012139" duration="5156000" />
     </task>
     <servers />
   </component>
@@ -155,11 +193,6 @@
           <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
           <line>51</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>

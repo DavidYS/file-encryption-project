@@ -1,462 +1,544 @@
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf');
+body{
+  font-size: 14px;
+  padding-top:4.2rem;
+  padding-bottom:4.2rem;
+  background:#d3d8e0;
+  background-image: url("images/background2.png");
+  background-size: 100% ;
+  background-repeat: no-repeat;
 }
 
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf');
+a{
+  text-decoration:none !important;
+}
+.fa-download{
+  color: #343A40;
+  font-size: 25px;
+}
+.fa-file{
+  border-right: 2px #d3d8e0 solid;
+  padding: 5px 5px;
+  background-color: #d3d8e0;
+}
+.fa-trash{
+  color: #fdba04;
+  border-left: 2px #d3d8e0 solid;
+  padding: 5px 5px;
 }
 
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf');
+.fa-trash:hover, .fa-trash:focus, .fa-trash:active{
+  color:#d3d8e0;
+  background-color: #343A40;
 }
 
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf');
-}
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
-* {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-}
-
-body, html {
-	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
-}
-
-/*---------------------------------------------*/
-a {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-a:focus {
-	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-  color: #57b846;
-}
-
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
-
-p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
-
-ul, li {
-	margin: 0px;
-	list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
-input {
-	outline: none;
-	border: none;
-}
-
-textarea {
+select, select:active, select:hover, select:focus{
+  padding: 0px 15px;
   outline: none;
   border: none;
+  color: #343A40;
 }
 
-textarea:focus, input:focus {
-  border-color: transparent !important;
+.fa-power-off{
+  float: right;
+  color: white;
+  font-size: 20px;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
-
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
-
-input::-webkit-input-placeholder { color: #999999; }
-input:-moz-placeholder { color: #999999; }
-input::-moz-placeholder { color: #999999; }
-input:-ms-input-placeholder { color: #999999; }
-
-textarea::-webkit-input-placeholder { color: #999999; }
-textarea:-moz-placeholder { color: #999999; }
-textarea::-moz-placeholder { color: #999999; }
-textarea:-ms-input-placeholder { color: #999999; }
-
-/*---------------------------------------------*/
-button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+.fa-power-off:hover, .fa-power-off:focus, .fa-power-off:active{
+  color: red;
 }
 
-button:hover {
-	cursor: pointer;
+.fa-upload:hover, .fa-upload:focus, .fa-upload:active, .myfooter:hover, .myfooter:focus, .myfooter:active,
+.login-btn:hover, .login-btn:focus, .login-btn:active, .fa-lock:hover, .fa-lock:focus, .fa-lock:active,
+.fa-unlock:hover, .fa-unlock:focus, .fa-unlock:active{
+  color: white;
+  cursor: pointer;
+  background: #fdba04;
 }
 
-iframe {
-	border: none !important;
+.logo{
+  padding: 30px 5px 30px 5px;
 }
 
-
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
-.txt1 {
-  font-family: Poppins-Regular;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #999999;
+.myfooter{
+  position: fixed;
+  top: 506px;
+  padding: 20px 211px 20px 211px;
+  background:#d3d8e0;
+  -webkit-box-shadow: 0px 13px 26px -9px rgba(0,0,0,0.75);
 }
 
-.txt2 {
-  font-family: Poppins-Regular;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #666666;
+.upload-part{
+  left: 110px;
+}
+.decrypt-part{
+  left: 300px;
 }
 
-
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
-
-.limiter {
-  width: 100%;
-  margin: 0 auto;
+.fa-upload, .fa-lock, .fa-unlock{
+  position: fixed;
+  color:#343A40;
+  font-size: 40px;
+  top: 350px;
+  background-color: #fdba04;
+  margin-left: -48px;
+  padding: 30px;
+  border-radius: 100%;
 }
 
-.container-login100 {
-  width: 100%;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+.fa-lock{
+  font-size: 20px;
+  top: 380px;
+  margin-left: 40px;
+  padding: 10px 13px;
+  border-radius: 50%;
 }
 
-.wrap-login100 {
-  width: 960px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 100px 130px 33px 95px;
+.fa-unlock{
+  font-size: 20px;
+  top: 380px;
+  margin-left: -40px;
+  padding: 10px;
 }
 
-/*------------------------------------------------------------------
-[  ]*/
-.login100-pic {
-  width: 316px;
+.crypt-name{
+  position: fixed;
+  top: 420px;
+  padding-left: 80px;
+}
+.decrypt-name{
+  position: fixed;
+  top: 420px;
+  margin-left: -5px;
 }
 
-.login100-pic img {
-  max-width: 100%;
+.file-name{
+  position: fixed;
+  top: 470px;
+  margin-left: 30px;
+  border: 2px #d3d8e0 solid;
 }
 
 
-/*------------------------------------------------------------------
-[  ]*/
-.login100-form {
-  width: 290px;
-}
-
-.login100-form-title {
-  font-family: Poppins-Bold;
-  font-size: 24px;
-  color: #333333;
-  line-height: 1.2;
-  text-align: center;
-
-  width: 100%;
-  display: block;
-  padding-bottom: 54px;
-}
-
-
-/*---------------------------------------------*/
-.wrap-input100 {
+.myform{
   position: relative;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-image: url("images/image.png");
+  background-size: 450px 600px;
+  background-repeat: no-repeat;
   width: 100%;
-  z-index: 1;
+  height: 500px;
+  pointer-events: auto;
+  outline: 0;
+  max-width: 500px;
+}
+.google:hover, .google:active, .google:focus{
+  background: #343A40;
+  color: white;
+}
+
+.loginform{
+  position: relative;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background:white;
+  color: #343A40;
+  padding: 20px;
+  width: 100%;
+  height: 500px;
+  pointer-events: auto;
+  outline: 0;
+  max-width: 500px;
+  -webkit-box-shadow: 0px 13px 26px -9px rgba(0,0,0,0.75);
+}
+
+.tx-tfm{
+  text-transform:uppercase;
+}
+
+.mybtn{
+  border-radius:50px;
+}
+
+.login-or {
+  position: relative;
+  color: #aaa;
+  margin-top: 10px;
   margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.input100 {
-  font-family: Poppins-Medium;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #666666;
-
-  display: block;
-  width: 100%;
-  background: #e6e6e6;
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 30px 0 68px;
-}
-
-
-/*------------------------------------------------------------------
-[ Focus ]*/
-.focus-input100 {
+.span-or {
   display: block;
   position: absolute;
-  border-radius: 25px;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 0px 0px;
-  color: rgba(87,184,70, 0.8);
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
 }
 
-.input100:focus + .focus-input100 {
-  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
-  animation: anim-shadow 0.5s ease-in-out forwards;
+.hr-or {
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
-@-webkit-keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 70px 25px;
-    opacity: 0;
-  }
+.google {
+  color:#666;
+  width:100%;
+  height:40px;
+  text-align:center;
+  outline:none;
+  border: 1px solid lightgrey;
 }
 
-@keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 70px 25px;
-    opacity: 0;
-  }
+form .error {
+  color: #ff0000;
 }
 
-.symbol-input100 {
-  font-size: 15px;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  border-radius: 25px;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding-left: 35px;
-  pointer-events: none;
-  color: #666666;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.input100:focus + .focus-input100 + .symbol-input100 {
-  color: #57b846;
-  padding-left: 28px;
-}
-
-/*------------------------------------------------------------------
-[ Button ]*/
-.container-login100-form-btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-.login100-form-btn {
-  font-family: Montserrat-Bold;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #fff;
-  text-transform: uppercase;
-
-  width: 100%;
-  height: 50px;
-  border-radius: 25px;
-  background: #57b846;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 25px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.login100-form-btn:hover {
-  background: #333333;
-}
-
-
-
-/*------------------------------------------------------------------
-[ Responsive ]*/
-
-
-
-@media (max-width: 992px) {
-  .wrap-login100 {
-    padding: 100px 90px 33px 85px;
-  }
-
-  .login100-pic {
-    width: 35%;
-  }
-
-  .login100-form {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .wrap-login100 {
-    padding: 100px 80px 33px 80px;
-  }
-
-  .login100-pic {
-    display: none;
-  }
-
-  .login100-form {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .wrap-login100 {
-    padding: 100px 15px 33px 15px;
-  }
-}
-
-
-/*------------------------------------------------------------------
-[ Alert validate ]*/
-
-.validate-input {
+.progress{
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
   position: relative;
+  left: 130px;
 }
-
-.alert-validate::before {
-  content: attr(data-validate);
+.progress:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
   position: absolute;
-  max-width: 70%;
-  background-color: white;
-  border: 1px solid #c80000;
-  border-radius: 13px;
-  padding: 4px 25px 4px 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 8px;
-  pointer-events: none;
-
-  font-family: Poppins-Medium;
-  color: #c80000;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  top: 0;
+  left: 0;
 }
-
-.alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
-  display: block;
+.progress > span{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
   position: absolute;
-  color: #c80000;
-  font-size: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 13px;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.2s linear forwards;
 }
 
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
+.progress .progress-value{
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+  font-size: 25px;
+  border: 5px darkgray solid;
+  color: white;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.progress-value>p{
+  margin-top: -26px;
+}
+.progress.yellow .progress-bar{
+  border-color: #fdba04;
+}
+.progress.yellow .progress-left .progress-bar{
+  animation: loading-1 0.5s linear forwards 1.2s;
 }
 
-@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
-    opacity: 1;
+@keyframes loading-1{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
   }
 }
+@keyframes loading-0{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+}
+@keyframes loading-3{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+}
+
+.remove-space {
+  margin-left: -5px !important;
+}
+
+select,
+option {
+  width: 150px;
+}
+
+option {
+  width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*------------------------------------------------*/
+/*-----------------[MEDIA QUERIES]----------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*-----------------[	0 - 1919	]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 1919px){
+  .file-name{
+    margin-top: 15px;
+  }
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 1599	]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 1599px){
+
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 1359	]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 1359px){
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 1199 	]-------------*/
+/*------------------ Bootstrap LG ----------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 1199px){
+  .myform{
+    background-size: 370px 600px;
+  }
+  .myfooter{
+    padding: 20px 174px 20px 174px;
+  }
+  .progress{
+    left: 95px;
+  }
+  .file-name{
+    margin-left: 0px;
+  }
+  .fa-upload{
+    margin-left: -65px;
+  }
+  .fa-lock{
+    margin-left: 20px;
+  }
+  .fa-unlock{
+    margin-left: -70px;
+  }
+  .crypt-name{
+    padding-left: 53px;
+  }
+  .decrypt-name{
+    margin-left: -45px;
+  }
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 1079	]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 1079px){
+
+}
+
+/*------------------------------------------------*/
+/*-----------------[	0 - 991 	]-------------*/
+/*------------------ Bootstrap MD ----------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 991px){
+  .progress{
+    margin-bottom: 20px;
+  }
+  .myform{
+    background-size: 280px 600px;
+  }
+  .myfooter{
+    padding: 20px 124px 20px 124px;
+  }
+  .progress{
+    left: 50px;
+  }
+  .file-name{
+    margin-left: -50px;
+  }
+  .fa-upload{
+    margin-left: -90px;
+  }
+  .fa-lock{
+    margin-left: 0px;
+  }
+  .fa-unlock{
+    margin-left: -134px;
+  }
+  .crypt-name{
+    padding-left: 20px;
+  }
+  .decrypt-name{
+    margin-left: -123px;
+  }
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 879     ]-------------*/
+/*-------------------             ----------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 879px){
+
+}
+
+/*------------------------------------------------*/
+/*-----------------[	0 - 767		]-------------*/
+/*------------------ Bootstrap SM ----------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 767px){
+  .myform{
+    background-size: 500px 600px;
+  }
+  .myfooter{
+    padding: 20px 239px 20px 239px;
+  }
+  body{
+    background-image: none;
+  }
+  .progress{
+    left: 125px;
+  }
+  .file-name{
+    margin-top: 25px;
+    margin-left: 60px;
+  }
+  .fa-upload{
+    margin-left: -155px;
+  }
+  .fa-lock{
+    margin-left: -140px;
+  }
+  .fa-unlock{
+    margin-left: -180px;
+  }
+  .crypt-name{
+    padding-left: 95px;
+  }
+  .decrypt-name{
+    margin-left: 45px;
+  }
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 719	]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 719px){
+
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 639	]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 639px){
+
+}
+/*------------------------------------------------*/
+/*-----------------[    0 - 575     ]-------------*/
+/*------------------ Bootstrap XS ----------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 575px){
+  .progress{
+    left: 0px;
+  }
+  .myfooter{
+    padding: 20px 215px 20px 215px;
+    position: relative;
+    top: 85px;
+  }
+  .myform {
+    background-size: 500px 600px;
+  }
+  .fa-upload{
+    position: relative;
+    top: 35px;
+    left: -30px;
+  }
+  .fa-unlock{
+    margin-left: -190px;
+  }
+  .decrypt-name{
+    margin-left: 35px;
+  }
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 479		]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 479px){
+
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 399	]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 399px){
+
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 359		]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 359px){
+
+}
+/*------------------------------------------------*/
+/*-----------------[	0 - 319		]-------------*/
+/*------------------------------------------------*/
+@media only screen and (max-width : 319px){
+
+}
+/*------------------------------------------------*/
+/*-------------------[THE END]--------------------*/
+/*------------------------------------------------*/

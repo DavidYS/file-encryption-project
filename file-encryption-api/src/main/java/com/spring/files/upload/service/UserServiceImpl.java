@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
         userCredentials.setSecretKey(generatePrivateSecretKey());
         userRepository.save(userCredentials);
 
-        return ResponseEntity.ok().body(userCredentials);
+        return ResponseEntity.ok().body("User created successfully!");
 
     }
 

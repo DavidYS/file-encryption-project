@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -66,10 +68,10 @@ public class FilesController {
             } else {
                 fileHelper.handlePdfFiles(file.getOriginalFilename(), encrypt, userService.getPrivateSecretKey(email));
             }
-            message = "Processed the file successfully: " + file.getOriginalFilename();
+            message = "Processed the file " + file.getOriginalFilename() + " successfully!";
             return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
         } catch (Exception e) {
-            message = "Could not process the file: " + file.getOriginalFilename() + "!";
+            message = "Could not process the file " + file.getOriginalFilename() + "!";
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
         }
     }
@@ -87,10 +89,23 @@ public class FilesController {
         return ResponseEntity.status(HttpStatus.OK).body(fileInfos);
     }
 
+    @DeleteMapping("/files/{filename:.+}")
+    public ResponseEntity<?> deleteFile(@PathVariable String filename) throws IOException {
+        storageService.deleteFile(filename);
+        return ResponseEntity.ok().body("File was deleted successfully!");
+    }
+
     @GetMapping("/files/{filename:.+}")
     public ResponseEntity<Resource> getFile(@PathVariable String filename) {
         Resource file = storageService.load(filename);
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+    }
+
+    @DeleteMapping("/files")
+    public ResponseEntity<?> deleteFiles() {
+        storageService.deleteAll();
+        storageService.init();
+        return ResponseEntity.ok().body("Files were deleted successfully!");
     }
 }

@@ -1,54 +1,67 @@
-<div class="wrap-login100 p-4">
-  <div class="container">
-    <h1 class="text-center pb-4">Upload file</h1>
-    <div class="row pb-2">
-      <div class="col-12">
-        <div *ngIf="currentFile" class="progress">
-          <div
-            [ngStyle]="{ width: progress + '%' }"
-            aria-valuemax="100"
-            aria-valuemin="0"
-            attr.aria-valuenow="{{ progress }}"
-            class="progress-bar progress-bar-info progress-bar-striped"
-            role="progressbar"
-          >
-            {{ progress }}%
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto">
+      <div id="first">
+        <div class="shadow-lg bg-light rounded myform form">
+          <div class="logo">
+            <div class="col-md-12 text-center">
+              <a (click)="logout()"><i class="fa fa-power-off"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div *ngIf="action" class="progress yellow">
+							<span class="progress-left">
+								<span class="progress-bar"></span>
+							</span>
+              <span class="progress-right">
+								<span class="progress-bar"></span>
+							</span>
+              <div class="progress-value">
+                <p> {{ progress }}%</p>
+              </div>
+            </div>
+            <div *ngIf="!action" class="progress yellow">
+							<span class="progress-left">
+								<span></span>
+							</span>
+              <span class="progress-right">
+								<span></span>
+							</span>
+              <div class="progress-value">
+                <p> {{ progress }}%</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="upload-zone">
+            <div class="col-md-3 text-center">
+              <i class="fa fa-lock" (click)="upload(true)"></i>
+              <p class="text-dark crypt-name"><b>Encrypt</b></p>
+            </div>
+            <div class="col-md-6 text-center upload-part">
+             <i class="fa fa-upload" onclick="$('#uploadFileInput').click();"></i>
+              <p class="text-dark file-name text-center" style="margin: -20px 0 0 25px; border: 0">{{fileName}}</p>
+
+              <p class="text-dark file-name remove-space"><i class="fa fa-file"></i>
+                <select name="file" id="file" [(ngModel)]="fileSelected">
+                  <option *ngFor="let file of fileInfos | async" [value]="file.url"
+                  selected>{{file.name}}</option>
+                </select>
+               <i class="fa fa-trash" (click)="delete()"></i>
+              </p>
+            </div>
+
+            <div class="col-md-3 text-center decrypt-part">
+              <i class="fa fa-unlock" (click)="upload(false)"></i>
+              <p class="text-dark decrypt-name"><b>Decrypt</b></p>
+            </div>
+          </div>
+          <div class="form myfooter text-center shadow rounded" style="margin-top:30px">
+            <a href="{{fileSelected}}"><i class="fa fa-download"></i></a>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row pb-2">
-      <div class="col-12">
-        <div class="alert alert-light text-center" role="alert">{{ message }}</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <label class="btn btn-default">
-          <input (change)="selectFile($event)" type="file"/>
-        </label>
-      </div>
-      <div class="col-4">
-        <button (click)="upload(true)" [disabled]="!selectedFiles" class="btn btn-success mr-2">
-          Encrypt
-        </button>
-        <button (click)="upload(false)" [disabled]="!selectedFiles" class="btn btn-info">
-          Decrypt
-        </button>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <div class="card-header">List of Files</div>
-          <ul
-            *ngFor="let file of fileInfos | async"
-            class="list-group list-group-flush"
-          >
-            <li class="list-group-item">
-              <a href="{{ file.url }}">{{ file.name }}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <input (change)="selectFile($event)" id="uploadFileInput" style="visibility:hidden" type="file"/>
     </div>
   </div>
 </div>

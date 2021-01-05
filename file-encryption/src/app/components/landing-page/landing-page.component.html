@@ -1,99 +1,114 @@
-<div class="wrap-login100">
-  <div class="login100-pic js-tilt text-center" data-tilt>
-    <img alt="IMG" src="../assets/images/logo.png" style="height: 35vh; width: 22vw;">
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 mx-auto">
+      <div id="first">
+        <div #inputForm class="shadow-lg rounded loginform form">
 
-  <!--  Login-->
-  <form *ngIf="isLogin; else register" class="login100-form validate-form">
-					<span class="login100-form-title">
-						Private encryption
-					</span>
+          <form *ngIf="isLogin; else register" name="login">
+            <div class="logo">
+              <div class="col-md-12 text-center"><h1>Login</h1></div>
+            </div>
+            <div *ngIf="invalidCredentials" class="alert alert-danger" role="alert">
+              Your credentials are invalid. Please retry!
+            </div>
 
-    <div *ngIf="invalidCredentials" class="alert alert-danger" role="alert">
-      Your credentials are invalid. Please retry.
+            <div class="form-group">
+              <label>Email address</label>
+              <input [(ngModel)]="userCredentials.email" aria-describedby="emailHelp" class="form-control" id="email"
+                     name="email" placeholder="Enter email"
+                     type="email">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input [(ngModel)]="userCredentials.password" aria-describedby="emailHelp" class="form-control"
+                     id="password" name="password" placeholder="Enter Password"
+                     type="password">
+            </div>
+            <div class="form-group text-center">
+              <a (click)="togglePage()" class="text-warning">Create an account
+                <i aria-hidden="true"
+                   class="fa fa-info-circle"
+                   data-placement="right"
+                   data-toggle="tooltip"
+                   title="Register for a more secure encryption"></i>
+              </a>
+
+            </div>
+            <div class="col-md-12 text-center ">
+              <button (click)="login()" class=" btn btn-block mybtn btn-warning tx-tfm login-btn" type="submit">Login
+              </button>
+            </div>
+            <div class="col-md-12 ">
+              <div class="login-or">
+                <hr class="hr-or">
+                <span class="span-or">or</span>
+              </div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <button [routerLink]="['/upload']" class="google btn mybtn" type="button">Continue as visitor
+                <i aria-hidden="true"
+                   class="fa fa-info-circle"
+                   data-placement="right"
+                   data-toggle="tooltip"
+                   title="Use standard encryption"></i>
+              </button>
+            </div>
+          </form>
+
+          <ng-template #register>
+            <form name="register">
+              <div class="logo">
+                <div class="col-md-12 text-center"><h1>Register</h1></div>
+              </div>
+              <div *ngIf="errorType === 'success'" class="alert alert-success" role="alert">
+                Your account was successfully created.
+              </div>
+              <div *ngIf="errorType === 'danger'" class="alert alert-danger" role="alert">
+                There was a problem with your sign up request.
+              </div>
+              <div *ngIf="errorType === 'warning'" class="alert alert-warning" role="alert">
+                The e-mail is already used.
+              </div>
+              <div class="form-group">
+                <label>Email address</label>
+                <input [(ngModel)]="userCredentials.email" aria-describedby="emailHelp" class="form-control" id="email"
+                       name="email" placeholder="Enter email"
+                       type="email">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input [(ngModel)]="userCredentials.password" aria-describedby="emailHelp" class="form-control"
+                       id="password" name="password" placeholder="Enter Password"
+                       type="password">
+              </div>
+              <div class="form-group text-center">
+                <a (click)="togglePage()" class="text-warning">Already have an account?</a>
+              </div>
+              <div class="col-md-12 text-center ">
+                <button (click)="signUp()" class=" btn btn-block mybtn btn-warning tx-tfm login-btn" type="submit">
+                  Register
+                </button>
+              </div>
+              <div class="col-md-12 ">
+                <div class="login-or">
+                  <hr class="hr-or">
+                  <span class="span-or">or</span>
+                </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <button [routerLink]="['/upload']" class="google btn mybtn" type="button">Continue as visitor
+                  <i aria-hidden="true"
+                     class="fa fa-info-circle"
+                     data-placement="right"
+                     data-toggle="tooltip"
+                     title="Use standard encryption"></i>
+                </button>
+              </div>
+            </form>
+          </ng-template>
+        </div>
+      </div>
     </div>
-
-    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-      <input [(ngModel)]="userCredentials.email" class="input100" name="email" placeholder="Email" type="text">
-      <span class="focus-input100"></span>
-      <span class="symbol-input100">
-							<i aria-hidden="true" class="fa fa-envelope"></i>
-						</span>
-    </div>
-
-    <div class="wrap-input100 validate-input" data-validate="Password is required">
-      <input [(ngModel)]="userCredentials.password" class="input100" name="pass" placeholder="Password" type="password">
-      <span class="focus-input100"></span>
-      <span class="symbol-input100">
-							<i aria-hidden="true" class="fa fa-lock"></i>
-						</span>
-    </div>
-
-    <div class="container-login100-form-btn">
-      <button (click)="login()" class="login100-form-btn">
-        Login
-      </button>
-    </div>
-
-    <div class="text-center">
-      <a (click)="togglePage()" class="txt2">
-        Create your Account
-      </a>
-    </div>
-  </form>
-
-  <!--  Register-->
-  <ng-template #register>
-    <form class="login100-form validate-form">
-					<span class="login100-form-title">
-						Create an account
-					</span>
-
-      <div *ngIf="errorType === 'success'" class="alert alert-success" role="alert">
-        Your account was successfully created.
-      </div>
-      <div *ngIf="errorType === 'danger'" class="alert alert-danger" role="alert">
-        There was a problem with your sign up request.
-      </div>
-      <div *ngIf="errorType === 'warning'" class="alert alert-warning" role="alert">
-        The e-mail is already used.
-      </div>
-
-      <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-        <input [(ngModel)]="userCredentials.email" class="input100" name="email" placeholder="Email" type="text">
-        <span class="focus-input100"></span>
-        <span class="symbol-input100">
-							<i aria-hidden="true" class="fa fa-envelope"></i>
-						</span>
-      </div>
-
-      <div class="wrap-input100 validate-input" data-validate="Password is required">
-        <input [(ngModel)]="userCredentials.password" class="input100" name="pass" placeholder="Password"
-               type="password">
-        <span class="focus-input100"></span>
-        <span class="symbol-input100">
-							<i aria-hidden="true" class="fa fa-lock"></i>
-						</span>
-      </div>
-
-      <div class="container-login100-form-btn">
-        <button (click)="signUp()" class="login100-form-btn">
-          Register
-        </button>
-      </div>
-      <div class="text-center">
-        <a (click)="togglePage()" class="txt2">
-          Already have an account?
-        </a>
-      </div>
-    </form>
-  </ng-template>
-
-
-  <div class="container-login100-form-btn">
-    <button [routerLink]="['upload']" class="login100-form-btn">
-      Continue as visitor
-    </button>
   </div>
 </div>
 
