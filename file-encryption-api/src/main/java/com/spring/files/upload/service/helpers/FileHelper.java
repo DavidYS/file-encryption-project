@@ -10,8 +10,10 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
 import com.spring.files.upload.service.FilesStorageServiceImpl;
+import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -32,8 +34,8 @@ public class FileHelper {
 
     public void handleTextFiles(MultipartFile file, boolean encrypt, String secretKey) {
         try {
-            String value = encrypt ? "encrypted-" : "decrypted-";
-            new File("uploads/encrypted-" + file.getOriginalFilename());
+            String value = encrypt ? "enc-" : "dec-";
+            new File("uploads/enc-" + file.getOriginalFilename());
             FileWriter writer = new FileWriter("uploads/" + value + file.getOriginalFilename());
             if (encrypt) {
                 writer.write(cipherHelper.encrypt(new String(file.getBytes(), StandardCharsets.UTF_8), secretKey));
@@ -49,7 +51,7 @@ public class FileHelper {
     private List<XWPFParagraph> readDocxFile(String fileName) {
         List<XWPFParagraph> paragraphs = new ArrayList<>();
         try {
-            File file = new File("C:\\Users\\david.ghiurau\\Downloads\\Facultate\\Anul 4\\TSD\\file-encryption-project\\uploads\\" + fileName);
+            File file = new File(filesStorageService.getRoot().toAbsolutePath() + "\\" + fileName);
             FileInputStream fis = new FileInputStream(file.getAbsolutePath());
 
             paragraphs = new XWPFDocument(fis).getParagraphs();
@@ -74,9 +76,18 @@ public class FileHelper {
         XWPFDocument document = new XWPFDocument();
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(
-                new File("C:\\Users\\david.ghiurau\\Downloads\\Facultate\\Anul 4\\TSD\\file-encryption-project\\uploads\\encrypted-" + fileName))) {
+                new File(filesStorageService.getRoot().toAbsolutePath() + "\\enc-" + fileName))) {
 
-            paragraphs.forEach(paragraphToAdd -> document.createParagraph().createRun().setText(cipherHelper.encrypt(paragraphToAdd.getText(), secretKey)));
+            paragraphs.forEach(paragraphToAdd -> {
+                XWPFParagraph paragraph = document.createParagraph();
+                paragraph.setAlignment(ParagraphAlignment.BOTH);
+                paragraph.setFirstLineIndent(720);
+                paragraph.setSpacingBetween(1.5);
+                XWPFRun run = paragraph.createRun();
+                run.setFontSize(12);
+                run.setFontFamily("Times New Roman");
+                run.setText(cipherHelper.encrypt(paragraphToAdd.getText(), secretKey));
+            });
 
             document.write(fileOutputStream);
         } catch (IOException e) {
@@ -88,9 +99,18 @@ public class FileHelper {
         XWPFDocument document = new XWPFDocument();
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(
-                new File(filesStorageService.getRoot().toAbsolutePath() + "\\decrypted-" + fileName))) {
+                new File(filesStorageService.getRoot().toAbsolutePath() + "\\dec-" + fileName))) {
 
-            paragraphs.forEach(paragraphToAdd -> document.createParagraph().createRun().setText(cipherHelper.decrypt(paragraphToAdd.getText(), secretKey)));
+            paragraphs.forEach(paragraphToAdd -> {
+                XWPFParagraph paragraph = document.createParagraph();
+                paragraph.setAlignment(ParagraphAlignment.BOTH);
+                paragraph.setFirstLineIndent(720);
+                XWPFRun run = paragraph.createRun();
+                run.setFontSize(12);
+                paragraph.setSpacingBetween(1.5);
+                run.setFontFamily("Times New Roman");
+                run.setText(cipherHelper.decrypt(paragraphToAdd.getText(), secretKey));
+            });
 
             document.write(fileOutputStream);
         } catch (IOException e) {
@@ -120,7 +140,7 @@ public class FileHelper {
 
     private void createDecryptedPdf(String fileName, String content, String secretKey) throws IOException, DocumentException {
         Document document = new Document();
-        PdfWriter.getInstance(document, new FileOutputStream(filesStorageService.getRoot().toAbsolutePath() + "\\decrypted-" + fileName));
+        PdfWriter.getInstance(document, new FileOutputStream(filesStorageService.getRoot().toAbsolutePath() + "\\dec-" + fileName));
 
         document.open();
         Font font = FontFactory.getFont(FontFactory.TIMES_ROMAN, 12, BaseColor.BLACK);
@@ -138,7 +158,7 @@ public class FileHelper {
 
     private void createEncryptedPdf(String fileName, String content, String secretKey) throws IOException, DocumentException {
         Document document = new Document();
-        PdfWriter.getInstance(document, new FileOutputStream(filesStorageService.getRoot().toAbsolutePath() + "\\encrypted-" + fileName));
+        PdfWriter.getInstance(document, new FileOutputStream(filesStorageService.getRoot().toAbsolutePath() + "\\enc-" + fileName));
 
         document.open();
         Font font = FontFactory.getFont(FontFactory.TIMES_ROMAN, 12, BaseColor.BLACK);

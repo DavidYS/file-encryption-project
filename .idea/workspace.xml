@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877c7f0c-ecad-4819-b3b0-e5ea67888108" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/controller/FilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/services/api-repository.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-encryption/src/app/components/upload-files/upload-files.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +122,7 @@
       <workItem from="1609857272384" duration="507000" />
       <workItem from="1609858012139" duration="5156000" />
       <workItem from="1610027984226" duration="652000" />
-      <workItem from="1610204638510" duration="1812000" />
+      <workItem from="1610204638510" duration="6656000" />
     </task>
     <servers />
   </component>
@@ -156,13 +152,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="10" />
+          <line>149</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
-          <line>129</line>
-          <option name="timeStamp" value="32" />
+          <line>114</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/FileHelper.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/CipherHelper.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/file-encryption-api/src/main/java/com/spring/files/upload/service/helpers/CipherHelper.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
