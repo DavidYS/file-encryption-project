@@ -45,8 +45,11 @@ public class FilesController {
     }
 
     @PostMapping("/sign-up")
-    public ResponseEntity<?> signUp(@RequestBody UserCredentials userCredentials) {
-        return this.userService.signUp(userCredentials);
+    public ResponseEntity<String> signUp(@RequestBody UserCredentials userCredentials) {
+        if (this.userService.signUp(userCredentials)) {
+            return ResponseEntity.ok().body("User successfully created!");
+        }
+        return ResponseEntity.badRequest().body("E-mail already used!");
     }
 
     @PostMapping("/login")

@@ -88,7 +88,7 @@ public class FileHelper {
         XWPFDocument document = new XWPFDocument();
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(
-                new File("C:\\Users\\david.ghiurau\\Downloads\\Facultate\\Anul 4\\TSD\\file-encryption-project\\uploads\\decrypted-" + fileName))) {
+                new File(filesStorageService.getRoot().toAbsolutePath() + "\\decrypted-" + fileName))) {
 
             paragraphs.forEach(paragraphToAdd -> document.createParagraph().createRun().setText(cipherHelper.decrypt(paragraphToAdd.getText(), secretKey)));
 

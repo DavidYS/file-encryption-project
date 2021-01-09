@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService {
 
-    ResponseEntity<?> signUp(UserCredentials userCredentials);
+    boolean signUp(UserCredentials userCredentials);
 
     Boolean login(UserCredentials userCredentials);
 

@@ -36,7 +36,7 @@ export class ApiRepository {
   deleteFiles = () => this.httpClient.delete(this.baseUrl + '/files');
 
   signUp = (userCredentials: UserCredentials) =>
-    this.httpClient.post(this.baseUrl + '/sign-up', userCredentials);
+    this.httpClient.post(this.baseUrl + '/sign-up', userCredentials, {responseType: 'text'});
 
   login = (userCredentials: UserCredentials) =>
     this.httpClient.post(this.baseUrl + '/login', userCredentials);

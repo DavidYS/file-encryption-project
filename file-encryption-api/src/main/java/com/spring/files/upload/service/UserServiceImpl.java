@@ -25,18 +25,18 @@ public class UserServiceImpl implements UserService {
 
     @SneakyThrows
     @Override
-    public ResponseEntity<?> signUp(UserCredentials userCredentials) {
+    public boolean signUp(UserCredentials userCredentials) {
         Optional<UserCredentials> userDb = this.userRepository.findByEmail(userCredentials.getEmail());
 
         if (userDb.isPresent()) {
-            return ResponseEntity.status(409).body("Email already exists");
+            return false;
         }
 
         userCredentials.setPassword(cipherHelper.encrypt(userCredentials.getPassword(), ""));
         userCredentials.setSecretKey(generatePrivateSecretKey());
         userRepository.save(userCredentials);
 
-        return ResponseEntity.ok().body("User created successfully!");
+        return true;
 
     }
 
