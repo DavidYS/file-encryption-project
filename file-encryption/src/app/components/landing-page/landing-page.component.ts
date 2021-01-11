@@ -63,7 +63,7 @@ export class LandingPageComponent implements OnInit {
     this.subscription.add(this.apiRepository.login(this.userCredentials).subscribe(
       (response) => {
         if (response) {
-          sessionStorage.setItem('private', JSON.stringify(this.userCredentials.email));
+          sessionStorage.setItem('private', this.userCredentials.email);
           this.router.navigate(['/upload']);
         } else {
           this.invalidCredentials = true;

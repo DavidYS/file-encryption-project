@@ -5,11 +5,9 @@ import com.spring.files.upload.repository.UserRepository;
 import com.spring.files.upload.service.helpers.CipherHelper;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -60,8 +58,16 @@ public class UserServiceImpl implements UserService {
     }
 
     private String generatePrivateSecretKey() {
-        byte[] array = new byte[256];
-        new Random().nextBytes(array);
-        return new String(array, StandardCharsets.UTF_8);
+        int leftLimit = 41;
+        int rightLimit = 122;
+        int targetStringLength = 255;
+        Random random = new Random();
+        StringBuilder buffer = new StringBuilder(targetStringLength);
+        for (int i = 0; i < targetStringLength; i++) {
+            int randomLimitedInt = leftLimit + (int)
+                    (random.nextFloat() * (rightLimit - leftLimit + 1));
+            buffer.append((char) randomLimitedInt);
+        }
+        return buffer.toString();
     }
 }

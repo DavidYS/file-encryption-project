@@ -22,6 +22,7 @@ export class UploadFilesComponent implements OnInit, OnDestroy {
   fileName: string;
   fileInfos: Observable<any>;
   fileSelected;
+  warning = false;
 
   private subscription = new Subscription();
 
@@ -57,8 +58,9 @@ export class UploadFilesComponent implements OnInit, OnDestroy {
       err => {
         this.progress = 0;
         this.action = false;
-        this.message = 'Could not upload the file!';
+        this.message = 'Bad key is used for decryption!';
         this.currentFile = undefined;
+        this.warning = true;
       }));
 
     this.selectedFiles = undefined;
@@ -75,7 +77,6 @@ export class UploadFilesComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-
     this.subscription.unsubscribe();
   }
 }
